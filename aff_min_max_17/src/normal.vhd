@@ -61,7 +61,11 @@ begin
     begin
 		strong_range := to_integer(unsigned(val_i)) - to_integer(unsigned(min_i));
         temp_str(0) <= '1';
-        str_mask <= std_logic_vector(unsigned(temp_str) srl strong_range);
+        if(strong_range < 15) then
+        	str_mask 	<= std_logic_vector(unsigned(temp_str) srl (strong_range+1));
+        	str_mask(0) <= '0';
+        	temp_str	<= str_mask;
+        	str_mask	<= std_logic_vector(unsigned(temp_str) srl to_integer(unsigned(min_i)));
 
     end process;
 
