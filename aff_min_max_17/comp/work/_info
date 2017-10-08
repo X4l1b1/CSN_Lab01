@@ -1,0 +1,126 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/comp
+!i10d 8192
+!i10e 25
+!i10f 100
+Ebin_lin
+Z1 w1507285867
+Z2 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Z4 d/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/comp
+Z5 8/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd
+Z6 F/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd
+l0
+L21
+VJd@RKQ2DcjgP1D9Y;o2zM1
+Z7 OE;C;10.2_1;57
+32
+Z8 !s110 1507285909
+Z9 !s108 1507285909.904033
+Z10 !s90 -reportprogress|300|-work|work|/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd|
+Z11 !s107 /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd|
+Z12 o-work work
+Z13 tExplicit 1
+!s100 gcgaFRleTj4h@kY5hj;cM1
+!i10b 1
+Aeq_logic
+R2
+R3
+DEx4 work 7 bin_lin 0 22 Jd@RKQ2DcjgP1D9Y;o2zM1
+l31
+L29
+VFKCCek;^_[2:HdPZWUYhV2
+R7
+32
+R8
+R9
+R10
+R11
+R12
+R13
+!s100 N5g[@c6]1RT[mj]h_OHXA3
+!i10b 1
+Echoix
+Z14 w1507282730
+Z15 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+R2
+R3
+R4
+Z16 8/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+Z17 F/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+l0
+L5
+V?VS?<zmh0NaldFa@Tn:7i3
+R7
+32
+Z18 !s110 1507282735
+Z19 !s108 1507282735.485228
+Z20 !s90 -reportprogress|300|-work|work|/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd|
+Z21 !s107 /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd|
+R12
+R13
+!s100 U;[IW@]CMNfKD?Q0>2cUc3
+!i10b 1
+Abehaviour
+R15
+R2
+R3
+DEx4 work 5 choix 0 22 ?VS?<zmh0NaldFa@Tn:7i3
+l15
+L13
+V4Si[J4Ai]ho5HT<?CJ_Z^0
+R7
+32
+R18
+R19
+R20
+R21
+R12
+R13
+!s100 BP4aM6j=[obTb@;KCIhD92
+!i10b 1
+Emin_max_top
+w1507281846
+R15
+R2
+R3
+R4
+8/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd
+F/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd
+l0
+L28
+V8k6AS1G<eY_l=[QAmWgB_2
+R7
+32
+R12
+R13
+!s110 1507282213
+!s100 6518VYXZ6]5D5@Q`m`o@[2
+!i10b 1
+!s108 1507282213.722637
+!s90 -reportprogress|300|-work|work|/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd|
+!s107 /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd|
+Enormal
+w1507285928
+R2
+R3
+R4
+8/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+F/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+l0
+L23
+VHQgP4a]cSale62Nm3V@nf1
+!s100 JF^`Ph?aR0oGP=Q6<0Ij`0
+R7
+32
+!s110 1507285931
+!i10b 1
+!s108 1507285930.996994
+!s90 -reportprogress|300|-work|work|/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd|
+!s107 /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd|
+R12
+R13

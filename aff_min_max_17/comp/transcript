@@ -1,0 +1,389 @@
+# //  Questa Sim
+# //  Version 10.2_1 linux Feb 16 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vlib work
+vmap work work
+# Copying /opt/EDA/mentor/questasim/10.2/questasim/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/EDA/mentor/questasim/10.2/questasim/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bin_lin
+# -- Compiling architecture eq_logic of bin_lin
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(21): near "architecture": expecting CASE
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity min_max_top
+# -- Compiling architecture struct of min_max_top
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd(50): near "use": expecting END
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(22): near "constant": syntax error
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(22): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): (vcom-1339) Case statement choices cover only 5 out of 81 cases.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(23): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(23): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(23): near "process": expecting ';'
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(23): near "process": expecting ';'
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(24): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(24): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(16): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd(24): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity choix
+# -- Compiling architecture behaviour of choix
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bin_lin
+# -- Compiling architecture eq_logic of bin_lin
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(22): near "constant": syntax error
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(22): near "constant": syntax error
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(53): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(101): near "max_i": expecting ';'
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(53): Illegal concurrent statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(105): near "a_normal": expecting IF
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(53): Cannot read output "led_o".
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(55): near "if": syntax error
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(109): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(55): near "if": syntax error
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(109): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(55): near "if": syntax error
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(109): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(55): near "if": syntax error
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(109): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(58): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(60): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(61): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(62): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(64): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(65): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(67): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(68): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(70): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(71): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(73): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(74): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(76): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(77): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(79): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(80): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(82): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(83): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(85): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(86): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(88): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(89): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(91): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(92): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(94): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(95): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(97): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(98): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(100): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(101): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(103): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(104): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(107): near "process": expecting IF
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(58): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(60): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(61): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(62): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(64): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(65): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(67): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(68): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(70): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(71): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(73): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(74): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(76): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(77): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(79): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(80): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(82): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(83): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(85): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(86): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(88): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(89): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(91): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(92): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(94): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(95): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(97): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(98): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(100): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(101): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(103): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(104): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(111): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(58): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(60): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(61): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(62): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(64): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(65): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(67): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(68): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(70): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(71): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(73): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(74): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(76): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(77): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(79): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(80): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(82): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(83): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(85): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(86): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(88): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(89): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(91): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(92): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(94): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(95): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(97): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(98): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(100): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(101): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(103): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(104): Illegal sequential statement.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(111): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(59): Type error resolving infix expression "<=" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(59): Cannot read output "led_o".
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(60): Enumeration literal '1' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(61): Enumeration literal 'X' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(112): VHDL Compiler exiting
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bin_lin
+# -- Compiling architecture eq_logic of bin_lin
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(39): near "use": expecting END
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
+vcom -reportprogress 300 -work work /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
+# QuestaSim vcom 10.2_1 Compiler 2013.02 Feb 16 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity normal
+# -- Compiling architecture a_normal of normal
+# ** Error: /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd(39): near "use": expecting END
+# /opt/EDA/mentor/questasim/10.2/questasim/linux/vcom failed.
