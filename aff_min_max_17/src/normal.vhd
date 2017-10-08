@@ -65,16 +65,24 @@ begin
         	str_mask 	<= std_logic_vector(unsigned(temp_str) srl (strong_range+1));
         	str_mask(0) <= '0';
         	temp_str	<= str_mask;
-        	str_mask	<= std_logic_vector(unsigned(temp_str) srl to_integer(unsigned(min_i)));
-
+        	str_mask	<= std_logic_vector(unsigned(temp_str) srl (to_integer(unsigned(min_i)) - 1));
+        else
+        	str_mask 	<= std_logic_vector(unsigned(temp_str) srl strong_range);
+		end if;
     end process;
 
 	weak :process (val_i, max_i) is
     begin
 		weak_range := to_integer(unsigned(max_i)) - to_integer(unsigned(val_i));
         temp_wek(0) <= '1';
-        wk_mask <= std_logic_vector(unsigned(temp_wek) srl weak_range);
-
+        if(weak_range < 14) then
+        	wk_mask 	<= std_logic_vector(unsigned(temp_wek) srl (weak_range+1));
+        	wk_mask(0) 	<= '0';
+        	temp_wek	<= wk_mask;
+        	wk_mask		<= std_logic_vector(unsigned(temp_wek) srl (to_integer(unsigned(val_i) - 1));
+        else
+        	wk_mask 	<= std_logic_vector(unsigned(temp_wek) srl weak_range);
+        end if;
     end process;
 
 	led_s <= str_mask OR (wk_mask AND osc_mask);
