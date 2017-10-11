@@ -47,7 +47,8 @@ architecture struct of min_max_top is
     ----------------------------
     -- Component Declarations --
     ----------------------------
-	component normal use entity work.normal is 
+
+	component normal is 
 		port(
 			min_i, max_i, val_i : in std_logic_vector(3 downto 0);
   			osc_i : in std_logic;
@@ -55,14 +56,14 @@ architecture struct of min_max_top is
 		);
 	end component;
 
-	component bin_lin use entity work.bin_lin is
+	component bin_lin is
 		port(
-			bin_i : in std_logic_vector(2 downto 0);
-        	lin_o : out std_logic_vector(7 downto 0)
+			bin_i : in std_logic_vector(3 downto 0);
+        	lin_o : out std_logic_vector(15 downto 0)
 		);
 	end component;
 
-	component choix use entity work.choix is
+	component choix is
 		port(
 			cmd: in std_logic_vector(1 downto 0);
 			led_00, led_01 : in std_logic_vector(15 downto 0);
@@ -98,7 +99,7 @@ begin
 
 	CHX : choix
 		port map (
-			cmd => cmd_i,
+			cmd => com_i,
 			led_00 => Normal_o,
 			led_01 => Lin_o,
 			led_o => leds_o

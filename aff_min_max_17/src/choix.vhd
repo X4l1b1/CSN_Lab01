@@ -14,10 +14,10 @@ architecture behaviour of choix is
 
 begin
 	with cmd select
-		led_o(15 downto 0) <= 	led_00(15 downto 0) when "00", -- normal mode
-		  						led_01(15 downto 0) when "01", -- linear mode
+		led_o(15 downto 0) <= led_00(15 downto 0) when "00",
+		  					led_01(15 downto 0) when "01",
 		(others => '0') when "10",
 		(others => '1') when "11",
-		(others => '0') when others;
+		 (others => '0') when others;
 
 end behaviour;
