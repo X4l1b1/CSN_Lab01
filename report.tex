@@ -83,14 +83,14 @@ Maintenant que le code compile, nous avons pu tester notre solution à l'aide de
 Le but de ce laboratoire est de réaliser un système permettant l'affichage linéaire d'une valeur.
 D'autre part, l'affichage sera piloté afin d'indiquer où se situe cette valeur par rapport à deux bornes \textit{min} et \textit{max}.
 
-Le système comprend 4 modes de fonctionnement:
+Le système comprend 4 modes de fonctionnement: \\
 
-\begin{center}
-\begin{tabular}{|c|c|l|}
+\begin{tabulary}{\textwidth}{|c|c|L|}
 	\hline
 	\textbf{Commande} & \textbf{Fonction} & \textbf{Description} \\
 	\hline
-	\texttt{00} & Marche normale & si \textit{valeur} est comprise entre \textit{min} et \textit{max} (bornes incluses): \textbf{TODO} \\
+	\texttt{00} & Marche normale & si \textit{valeur} est comprise entre \textit{min} et \textit{max} (bornes incluses): les LEDs de \textit{min} à valeur sont allumées en intensité forte, les LEDs de \textit{(valeur + 1)} à \textit{max} son allumées en intensité faible et toutes les autres LEDs sont éteintes. \\ & & \\
+	& & si \textit{valeur} est hors de l'intervalle \textit{min} \textit{max}, l'affichage est éteint. \\
 	\hline
 	\texttt{01} & Mode linéaire & Affichage linéaire de \textit{valeur}. Les LEDs de 0 à \textit{valeur} sont allumées avec une intensité forte. \\
 	\hline
@@ -98,8 +98,7 @@ Le système comprend 4 modes de fonctionnement:
 	\hline
 	\texttt{11} & Mode allumé & Toutes les LEDs de l'afficheur sont allumées. \\
 	\hline
-\end{tabular}
-\end{center}
+\end{tabulary}
 
 \subsection{Spécifications}
 
