@@ -1,0 +1,88 @@
+%%% Documentation %%%
+%
+% Pour insérer du code:
+% \begin{lstlisting}[title=\textbf{Fichier:} test.c]
+% int main(void) {
+%		return 0;
+% }
+% \end{lstlisting}
+
+\documentclass[a4paper]{article}
+
+% Report language (english | french)
+\newcommand{\lang}{french}
+
+% Course name
+\newcommand{\course}{CSN}
+
+% Assignment
+\newcommand{\assignment}{Laboratoire 01}
+
+% Assignment detail
+\newcommand{\assignmentDetail}{Affichage linéaire d'une valeur}
+
+% Students
+\newcommand{\students}{
+	Étudiants: 	& Lucas Elisei \\
+        		   			& Arthur Passuello
+}
+
+% Professor
+\newcommand{\teacher}{
+	Professeur: & Etienne Messerli
+}
+
+% Assistant
+\newcommand{\assistant}{
+	Assistant:  & Mike Meury
+}
+
+\input{latex/template.tex}
+
+% Disbable paragraph indentation.
+\setlength\parindent{0pt}
+
+% Section numerotation depth.
+\setcounter{secnumdepth}{3}
+
+% Table of contents depth.
+\setcounter{tocdepth}{3}
+
+% Code language
+\lstset{language = bash}
+
+%%% Beginning of document.
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+\section{Partie 1}
+
+\subsection{Conception}
+
+\subsection{Implémentation}
+
+\subsection{Simulation}
+
+\subsection{Tests réalisés}
+
+\section{Partie 2}
+
+\subsection{Conception}
+
+\subsection{Implémentation}
+
+\subsection{Simulation}
+
+\subsection{Tests réalisés}
+
+\end{document}
