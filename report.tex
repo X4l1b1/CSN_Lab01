@@ -49,7 +49,7 @@
 \setcounter{tocdepth}{3}
 
 % Code language
-\lstset{language = bash}
+\lstset{language = vhdl}
 
 %%% Beginning of document.
 
@@ -63,26 +63,107 @@
 
 \newpage
 
-\section{Introduction}
+\section{Journal de travail}
 
-\section{Partie 1}
+\subsection*{06.10.2017}
 
-\subsection{Conception}
+Lors de cette première séance, nous avons tout d'abord analysé le cahier des charges et cherché une décomposition en plusieurs blocs afin de faciliter la compréhension du système.
+Nous avons ensuite commencé à coder les différents blocs de notre système.
 
-\subsection{Implémentation}
+\subsection*{13.10.2017}
 
-\subsection{Simulation}
+Durant la semaine, nous avons fini de développer le code VHDL. Il est donc temps de tester notre solution. Malheureusement, le bloc \texttt{normal} a posé problème lors de la compilation et le fait que nous ayons utilisé des \lstinline{process} ne facilitait pas le déboguage. Après réflexion, nous avons trouvé une solution combinatoire qui s'est avérée bien plus simple à mettre en place que la prédédente.
 
-\subsection{Tests réalisés}
+Maintenant que le code compile, nous avons pu tester notre solution à l'aide de la simulation ainsi que des \textit{test benchs} et ce fut un plaisir de constater que notre nouvelle approche a porté ses fruits.
 
-\section{Partie 2}
+\section{Cahier des charges}
 
-\subsection{Conception}
+\subsection{Mandat}
 
-\subsection{Implémentation}
+Le but de ce laboratoire est de réaliser un système permettant l'affichage linéaire d'une valeur.
+D'autre part, l'affichage sera piloté afin d'indiquer où se situe cette valeur par rapport à deux bornes \textit{min} et \textit{max}.
 
-\subsection{Simulation}
+Le système comprend 4 modes de fonctionnement:
 
-\subsection{Tests réalisés}
+\begin{center}
+\begin{tabular}{|c|c|l|}
+	\hline
+	\textbf{Commande} & \textbf{Fonction} & \textbf{Description} \\
+	\hline
+	\texttt{00} & Marche normale & si \textit{valeur} est comprise entre \textit{min} et \textit{max} (bornes incluses): \textbf{TODO} \\
+	\hline
+	\texttt{01} & Mode linéaire & Affichage linéaire de \textit{valeur}. Les LEDs de 0 à \textit{valeur} sont allumées avec une intensité forte. \\
+	\hline
+	\texttt{10} & Mode éteint & Toutes les LEDs de l'afficheur sont éteintes. \\
+	\hline
+	\texttt{11} & Mode allumé & Toutes les LEDs de l'afficheur sont allumées. \\
+	\hline
+\end{tabular}
+\end{center}
+
+\subsection{Spécifications}
+
+Voici l'affichage utilisé pour ce projet (\textit{val} $= 8$, \textit{min} $= 3$, \textit{max} $= 12$):
+
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[width=0.8\textwidth]{figures/specs_ex.png}
+	\captionof{figure}{Exemple d'affichage de LEDs}
+\end{minipage}
+
+\begin{itemize}
+	\item L'intensité forte d'une LED est obtenue par l'enclenchement permanent de celle-ci.
+	\item L'intensité faible d'une LED est obtenue par un enclenchement alternatif. La puissance moyenne émise est ainsi plus faible.
+	\item Il est garanti que \textit{max} est plus grand que \textit{min}.
+\end{itemize}
+
+\subsection{Entrées et sorties du système}
+
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[width=0.8\textwidth]{figures/specs_io.png}
+	\captionof{figure}{Schéma bloc du système}
+\end{minipage}
+
+\begin{itemize}
+	\item \texttt{com\_i } \qquad signal de commande, signal de 2 bits
+	\item \texttt{min\_i } \qquad borne inférieure de la plage, signal de 4 bits
+	\item \texttt{max\_i } \qquad borne supérieure de la plage, signal de 4 bits
+	\item \texttt{osc\_i } \qquad signal d'oscillation pour obtenir une intensité faible, signal de 1 bit
+	\item \texttt{val\_i } \qquad valeur d'entrée à visualiser sur l'afficheur linéaire, signal de 4 bits
+	\item \texttt{leds\_o} \qquad affichage linéaire composé de 16 LEDs, signal de 16 bits
+\end{itemize}
+
+\section{Analyse du système}
+
+\begin{minipage}{\textwidth}
+	\center
+	\textbf{TODO: Inclure schéma}
+	\captionof{figure}{Décomposition en blocs du système}
+\end{minipage}
+
+La logique globale du système a été décomposée selon le schéma de la \textbf{Figure 3}. L'analyse de chaque bloc est faite ci-dessous.
+
+\subsection{Partie 1}
+
+\subsubsection{Conception}
+
+\subsubsection{Implémentation}
+
+\subsubsection{Simulation}
+
+\subsubsection{Tests réalisés}
+
+\subsection{Partie 2}
+
+\subsubsection{Conception}
+
+\subsubsection{Implémentation}
+
+\subsubsection{Simulation}
+
+\subsubsection{Tests réalisés}
+
+\section{Conclusion}
 
 \end{document}
