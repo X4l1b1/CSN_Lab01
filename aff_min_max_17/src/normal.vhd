@@ -62,7 +62,7 @@ begin
     strong :process (val_i, min_i) is
 	variable strong_range 	: integer range 0 to 15;
     begin
-		strong_range := to_integer(unsigned(val_i)) - to_integer(unsigned(min_i));
+	strong_range := to_integer(unsigned(val_i)) - to_integer(unsigned(min_i));
         temp_str(0) <= '1';
         str_mask <= std_logic_vector(unsigned(temp_str) srl strong_range);
 
