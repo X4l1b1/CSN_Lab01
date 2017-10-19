@@ -8,7 +8,7 @@
 % \end{lstlisting}
 
 \documentclass[a4paper]{article}
-
+\usepackage{listings}
 % Report language (english | french)
 \newcommand{\lang}{french}
 
@@ -203,19 +203,38 @@ Ce bloc est équivalement à un multiplexeur dont la table de vérité serait la
 \end{center}
 Le tout étant décrit par flot de donnée, utilisant l'entrée com\_i en paramètre.
 \subsection{Simulation}
-
+\textbf{ON A PAS DE SCREEN NI RIEN DE LA CONSOLE, EST CE QU'IL FAUDRAIT ALLER EN REFAIRE SUR PLACE ?}
 \subsection{Tests réalisés}
+Afin de tester de facon exhaustive notre système, le fichier fourni \textit{run\_aff\_min\_max\_tb.tcl} a été utilisé, donnant en sortie le résultat suivant : 
+\begin{lstlisting}[language=bash]
+# ** Note: >> Debut de la simulation
+#    Time: 500001 ns  Iteration: 0  Instance: /min_max_top_tb/tst
+# ** Note: >> Nombre d'erreur(s) detectee(s): 0
+#    Time: 8704500001 ns  Iteration: 0  Instance: /min_max_top_tb/tst
+# ** Note: >> Bravo, votre composant à passé tous les cas.
+#    Time: 8704500001 ns  Iteration: 0  Instance: /min_max_top_tb/tst
+# ** Note: >> Fin de la simulation
+#    Time: 8704500001 ns  Iteration: 0  Instance: /min_max_top_tb/tst
 
-\subsection{Partie 2}
+\end{lstlisting}
+\newpage
+\subsubsection{Synthèse}
+Ci-dessous est présenté le résultat de la synthèse de notre système à travers Quartus II, depuis min\_max\_top :
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[scale=0.5]{figures/min_max_top.png}
+	\captionof{figure}{Synthèse du système dans Quartus II}
+    	\end{minipage}
 
-\subsubsection{Conception}
+%\subsection{Partie 2}
 
-\subsubsection{Implémentation}
+%\subsubsection{Conception}
 
-\subsubsection{Simulation}
+%\subsubsection{Implémentation}
 
-\subsubsection{Tests réalisés}
+%\subsubsection{Simulation}
+
+%\subsubsection{Tests réalisés}
 
 \section{Conclusion}
-
 \end{document}

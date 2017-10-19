@@ -1,0 +1,9 @@
+# ** Note: >> Debut de la simulation
+#    Time: 500001 ns  Iteration: 0  Instance: /min_max_top_tb/tst
+# ** Note: >> Nombre d'erreur(s) detectee(s): 0
+#    Time: 8704500001 ns  Iteration: 0  Instance: /min_max_top_tb/tst
+# ** Note: >> Bravo, votre composant à passé tous les cas.
+#    Time: 8704500001 ns  Iteration: 0  Instance: /min_max_top_tb/tst
+# ** Note: >> Fin de la simulation
+#    Time: 8704500001 ns  Iteration: 0  Instance: /min_max_top_tb/tst
+
