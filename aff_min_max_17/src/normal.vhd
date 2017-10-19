@@ -34,48 +34,57 @@ architecture a_normal of normal is
 
 	signal temp_str			: std_logic_vector(15 downto 0);
 	signal temp_wek			: std_logic_vector(15 downto 0);
+	signal temp_min			: std_logic_vector(15 downto 0);
     signal osc_mask 		: std_logic_vector(15 downto 0);
-    signal str_mask 		: std_logic_vector(15 downto 0);
-    signal wk_mask  		: std_logic_vector(15 downto 0);
-    signal led_s    		: std_logic_vector(15 downto 0);
-    
+    signal max_mask 		: std_logic_vector(15 downto 0);
+    signal min_mask  		: std_logic_vector(15 downto 0);
+    signal val_mask  		: std_logic_vector(15 downto 0);
+    signal led_s    		: std_logic_vector(15 downto 0) := (others => '0');
+	signal out_of_bounds_mask : std_logic_vector(15 downto 0) := (others => '0');
+	signal is_out	 		: Boolean;
+--  signal is_out_high 		: Boolean;
+--  signal is_out_low 		: Boolean;
 	
 
---	component bin_lin use entity work.bin_lin is
---		port(
---			bin_i : in std_logic_vector(3 downto 0);
---        	lin_o : out std_logic_vector(15 downto 0)
---		);
---	end component;
-
+	component bin_lin is
+		port(
+			bin_i : in std_logic_vector(3 downto 0);
+        	lin_o : out std_logic_vector(15 downto 0)
+		);
+	end component;
+-- 
 begin
 
-    osc :process (osc_i) is
-    begin
-        if osc_i = '1' then
-        	osc_mask <= (others => '1');
-	else
-		osc_mask <= (others => '0');
-	end if;
-    end process;
+	is_out <= true when (val_i > max_i OR val_i < min_i) else false;
+--  is_out_high <= true when val_i > max_i else false;
+--	is_out_low  <= true when val_i < min_i else false;
+	osc_mask <= (others => osc_i);
 
-    strong :process (val_i, min_i) is
-	variable strong_range 	: integer range 0 to 15;
-    begin
-	strong_range := to_integer(unsigned(val_i)) - to_integer(unsigned(min_i));
-        temp_str(0) <= '1';
-        str_mask <= std_logic_vector(unsigned(temp_str) srl strong_range);
+	bl_max : bin_lin
+		port map (
+			bin_i => max_i,
+			lin_o => max_mask
+		);
 
-    end process;
+	bl_min : bin_lin
+		port map (
+			bin_i => min_i,
+			lin_o => min_mask
+		);
 
-	weak :process (val_i, max_i) is
-	variable weak_range		: integer range 0 to 15;
-    begin
-		weak_range := to_integer(unsigned(max_i)) - to_integer(unsigned(val_i));
-        temp_wek(0) <= '1';
-        wk_mask <= std_logic_vector(unsigned(temp_wek) srl weak_range);
+	bl_val : bin_lin
+		port map (
+			bin_i => val_i,
+			lin_o => val_mask
+		);
 
-    end process;
+	temp_wek <= (max_mask XOR val_mask) AND osc_mask;
+	temp_min <= '0' & min_mask(15 downto 1);
+	temp_str <= (max_mask AND val_mask) XOR temp_min;
+-- out_of_bounds_mask <= val_mask and osc_mask when is_out_low else '1' & (x"FFFF" xor val_mask)(15 downto 1);
 
-	led_o <= str_mask OR (wk_mask AND osc_mask);
+	led_s	 <= temp_wek OR temp_str;
+	
+	led_o 	 <= led_s when (not is_out) else out_of_bounds_mask;
+   
 end a_normal;

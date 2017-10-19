@@ -83,7 +83,7 @@ begin
       );
    tst : min_max_top_tester
       generic map (
-         mode_normal_optionnel => TRUE
+         mode_normal_optionnel => FALSE
       )
       port map (
          leds_obs => leds_obs,
