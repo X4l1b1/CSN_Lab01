@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri Oct 13 12:24:02 2017
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : min_max_top
+Top-level Entity Name : maxv_top
+Family : MAX V
+Device : 5M570ZF256C5
+Timing Models : Final
+Total logic elements : 112 / 570 ( 20 % )
+Total pins : 159 / 159 ( 100 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

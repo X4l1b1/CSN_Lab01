@@ -7,120 +7,304 @@ Z0 d/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/comp
 !i10d 8192
 !i10e 25
 !i10f 100
+T_opt
+V6TLz1GQbDadO2DQ^3Hcek1
+04 11 6 work min_max_top struct 1
+=1-000000000000-59dde56a-7b90e-1da0
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OE;O;10.2_1;57
+Z3 d/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/comp
+!s110 1507714411
+T_opt1
+VzLoaGO[IEnSlo`=8fAeVI0
+04 14 6 work min_max_top_tb struct 1
+=1-000000000000-59ddf202-e28c6-25b2
+R1
+n@_opt1
+R2
+R3
+!s110 1507717634
+T_opt2
+VQmd9Q<Td_TTT^HG0f`<Od1
+04 11 6 work console_sim struct 1
+=1-000000000000-59e08fb1-7bd7a-1ce4
+R1
+n@_opt2
+R2
+R3
+!s110 1507889074
 Ebin_lin
-Z1 w1507285867
-Z2 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
-Z3 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
-Z4 d/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/comp
-Z5 8/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd
-Z6 F/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd
+Z4 w1507888695
+Z5 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R3
+Z7 8../src/bin_lin.vhd
+Z8 F../src/bin_lin.vhd
 l0
 L21
 VJd@RKQ2DcjgP1D9Y;o2zM1
-Z7 OE;C;10.2_1;57
+Z9 OE;C;10.2_1;57
 32
-Z8 !s110 1507285909
-Z9 !s108 1507285909.904033
-Z10 !s90 -reportprogress|300|-work|work|/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd|
-Z11 !s107 /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/bin_lin.vhd|
-Z12 o-work work
-Z13 tExplicit 1
+Z10 !s110 1507890683
+Z11 !s108 1507890683.938686
+Z12 !s90 -reportprogress|300|-work|work|../src/bin_lin.vhd|
+Z13 !s107 ../src/bin_lin.vhd|
+Z14 o-work work
+Z15 tExplicit 1
 !s100 gcgaFRleTj4h@kY5hj;cM1
 !i10b 1
 Aeq_logic
-R2
-R3
+R5
+R6
 DEx4 work 7 bin_lin 0 22 Jd@RKQ2DcjgP1D9Y;o2zM1
+32
+R10
 l31
 L29
-VFKCCek;^_[2:HdPZWUYhV2
-R7
-32
-R8
+V2dSmRWE<R[:L3SlgbgnT40
 R9
-R10
 R11
 R12
 R13
-!s100 N5g[@c6]1RT[mj]h_OHXA3
+R14
+R15
+!s100 06oD<OIEoVcLXkXRYN54R0
 !i10b 1
 Echoix
-Z14 w1507282730
-Z15 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
-R2
+Z16 w1507282730
+Z17 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+R5
+R6
 R3
-R4
-Z16 8/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
-Z17 F/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd
+Z18 8../src/choix.vhd
+Z19 F../src/choix.vhd
 l0
 L5
 V?VS?<zmh0NaldFa@Tn:7i3
-R7
+R9
 32
-Z18 !s110 1507282735
-Z19 !s108 1507282735.485228
-Z20 !s90 -reportprogress|300|-work|work|/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd|
-Z21 !s107 /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/choix.vhd|
-R12
-R13
+R10
+Z20 !s108 1507890683.858089
+Z21 !s90 -reportprogress|300|-work|work|../src/choix.vhd|
+Z22 !s107 ../src/choix.vhd|
+R14
+R15
 !s100 U;[IW@]CMNfKD?Q0>2cUc3
 !i10b 1
 Abehaviour
-R15
-R2
-R3
+R17
+R5
+R6
 DEx4 work 5 choix 0 22 ?VS?<zmh0NaldFa@Tn:7i3
+32
+R10
 l15
 L13
 V4Si[J4Ai]ho5HT<?CJ_Z^0
-R7
-32
-R18
-R19
+R9
 R20
 R21
-R12
-R13
+R22
+R14
+R15
 !s100 BP4aM6j=[obTb@;KCIhD92
 !i10b 1
-Emin_max_top
-w1507281846
-R15
-R2
+Econsole_sim
+Z23 w1507198418
+R5
+R6
 R3
-R4
-8/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd
-F/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd
+Z24 8../src_tb/console_sim.vhd
+Z25 F../src_tb/console_sim.vhd
+l0
+L24
+VEMBoN>CS`4mX3ZX5`fW:i2
+R9
+32
+Z26 !s110 1507890684
+Z27 !s108 1507890684.079935
+Z28 !s90 -reportprogress|300|-work|work|../src_tb/console_sim.vhd|
+Z29 !s107 ../src_tb/console_sim.vhd|
+R14
+R15
+!s100 bI5Y90W`iJ^^C]WCeDK8U0
+!i10b 1
+Astruct
+R17
+Z30 DEx4 work 11 min_max_top 0 22 8k6AS1G<eY_l=[QAmWgB_2
+R5
+R6
+DEx4 work 11 console_sim 0 22 EMBoN>CS`4mX3ZX5`fW:i2
+l118
+L85
+VcS89EC=^NFLb`MSMcCJ?Q0
+R9
+32
+R26
+R27
+R28
+R29
+R14
+R15
+!s100 @;n`fJX6>ZfJN[5jiHL^52
+!i10b 1
+Emin_max_top
+Z31 w1507714306
+R17
+R5
+R6
+R3
+Z32 8../src/min_max_top.vhd
+Z33 F../src/min_max_top.vhd
 l0
 L28
 V8k6AS1G<eY_l=[QAmWgB_2
-R7
+R9
 32
-R12
-R13
-!s110 1507282213
+R10
+Z34 !s108 1507890683.696370
+Z35 !s90 -reportprogress|300|-work|work|../src/min_max_top.vhd|
+Z36 !s107 ../src/min_max_top.vhd|
+R14
+R15
 !s100 6518VYXZ6]5D5@Q`m`o@[2
 !i10b 1
-!s108 1507282213.722637
-!s90 -reportprogress|300|-work|work|/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd|
-!s107 /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/min_max_top.vhd|
-Enormal
-w1507285928
-R2
-R3
-R4
-8/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
-F/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd
-l0
-L23
-VHQgP4a]cSale62Nm3V@nf1
-!s100 JF^`Ph?aR0oGP=Q6<0Ij`0
-R7
+Astruct
+R17
+R5
+R6
+R30
 32
-!s110 1507285931
+R10
+l80
+L39
+V0j191e=GH]bhzc@EWMbmi0
+R9
+R34
+R35
+R36
+R14
+R15
+!s100 B[5jQkbKH_=B62LN[ZhYh3
 !i10b 1
-!s108 1507285930.996994
-!s90 -reportprogress|300|-work|work|/media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd|
-!s107 /media/redsuser/BATMAN/CSN_Lab02/aff_min_max_17/src/normal.vhd|
-R12
-R13
+Emin_max_top_tb
+Z37 w1507888805
+R17
+R5
+R6
+R3
+Z38 8../src_tb/min_max_top_tb.vhd
+Z39 F../src_tb/min_max_top_tb.vhd
+l0
+L25
+VfF8j^mMd_:GiABW6Of2VA2
+R9
+32
+R26
+Z40 !s108 1507890684.031468
+Z41 !s90 -reportprogress|300|-work|work|../src_tb/min_max_top_tb.vhd|
+Z42 !s107 ../src_tb/min_max_top_tb.vhd|
+R14
+R15
+!s100 mW0]=5fj7C8[oJWWNTi0m0
+!i10b 1
+Astruct
+Z43 DEx4 work 18 min_max_top_tester 0 22 LfGzdQo^6iHjF8A9Z@EM91
+R30
+R17
+R5
+R6
+DEx4 work 14 min_max_top_tb 0 22 fF8j^mMd_:GiABW6Of2VA2
+32
+R26
+l72
+L28
+V?T>V=0<>`IeVz6R`j^kje0
+R9
+R40
+R41
+R42
+R14
+R15
+!s100 C:kGlal_kJ>M=ZA=7KRam1
+!i10b 1
+Emin_max_top_tester
+Z44 w1507027418
+R17
+R5
+R6
+R3
+Z45 8../src_tb/min_max_top_tester.vhd
+Z46 F../src_tb/min_max_top_tester.vhd
+l0
+L30
+VLfGzdQo^6iHjF8A9Z@EM91
+R9
+32
+R10
+Z47 !s108 1507890683.982437
+Z48 !s90 -reportprogress|300|-work|work|../src_tb/min_max_top_tester.vhd|
+Z49 !s107 ../src_tb/min_max_top_tester.vhd|
+R14
+R15
+!s100 9mA99Hg[f98DzO3PL;i`l3
+!i10b 1
+Atester
+DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
+R17
+R5
+R6
+R43
+32
+R10
+l164
+L69
+V<>4RCO<eM1;DBD@lQ_m1]0
+R9
+R47
+R48
+R49
+R14
+R15
+!s100 ziDfIo;3m9XGZiRk9A<KK0
+!i10b 1
+Enormal
+Z50 w1507888481
+R17
+R5
+R6
+R3
+Z51 8../src/normal.vhd
+Z52 F../src/normal.vhd
+l0
+L24
+V]cekUT0R0=_5`1E0XOEdU3
+R9
+32
+R10
+Z53 !s108 1507890683.897899
+Z54 !s90 -reportprogress|300|-work|work|../src/normal.vhd|
+Z55 !s107 ../src/normal.vhd|
+R14
+R15
+!s100 boU>LlQEG<Q@kXOGUZh6h3
+!i10b 1
+Aa_normal
+R17
+R5
+R6
+DEx4 work 6 normal 0 22 ]cekUT0R0=_5`1E0XOEdU3
+32
+R10
+l54
+L33
+VZKid7h5n8:RmXEH7V[TF`3
+R9
+R53
+R54
+R55
+R14
+R15
+!s100 @llNULV7VBZ8L]3:h]?SN2
+!i10b 1

@@ -25,6 +25,9 @@ vmap work work
 
  # bin-lin file compilation
 vcom -reportprogress 300 -work work   ../src/min_max_top.vhd
+vcom -reportprogress 300 -work work   ../src/choix.vhd
+vcom -reportprogress 300 -work work   ../src/normal.vhd
+vcom -reportprogress 300 -work work   ../src/bin_lin.vhd
 
  # test-bench compilation
 vcom -reportprogress 300 -work work   ../src_tb/min_max_top_tester.vhd

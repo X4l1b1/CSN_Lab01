@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Fri Oct 13 12:23:58 2017
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : min_max_top
+Top-level Entity Name : maxv_top
+Family : MAX V
+Total logic elements : 112
+Total pins : 159
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
