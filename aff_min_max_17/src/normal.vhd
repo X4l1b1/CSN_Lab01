@@ -58,6 +58,7 @@ begin
 	is_out <= true when (val_i > max_i OR val_i < min_i) else false;
 --  is_out_high <= true when val_i > max_i else false;
 --	is_out_low  <= true when val_i < min_i else false;
+--  is_out <= true when is_out_high OR is_out_low else false;
 	osc_mask <= (others => osc_i);
 
 	bl_max : bin_lin
@@ -81,7 +82,7 @@ begin
 	temp_wek <= (max_mask XOR val_mask) AND osc_mask;
 	temp_min <= '0' & min_mask(15 downto 1);
 	temp_str <= (max_mask AND val_mask) XOR temp_min;
--- out_of_bounds_mask <= val_mask and osc_mask when is_out_low else '1' & (x"FFFF" xor val_mask)(15 downto 1);
+-- out_of_bounds_mask <= val_mask and osc_mask when is_out_low else (x"FFFF" xor ('1' & val_mask(15 downto 1));
 
 	led_s	 <= temp_wek OR temp_str;
 	
