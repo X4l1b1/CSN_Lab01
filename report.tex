@@ -139,15 +139,18 @@ Voici l'affichage utilisé pour ce projet (\textit{val} $= 8$, \textit{min} $= 3
 	\center
 	\includegraphics[width = 0.8\textwidth]{figures/schema_bloc.jpg}
 	\captionof{figure}{Décomposition en blocs du système}
+	\label{fig:3}
 \end{minipage}
 
-La logique globale du système a été décomposée selon le schéma de la \textbf{Figure 3}. L'analyse de chaque bloc est faite ci-dessous.
+La logique globale du système a été décomposée selon le schéma de la figure~\ref{fig:3}. L'analyse de chaque bloc est faite ci-dessous.
 \newpage
-\section{Travail Demandé}
+
+\section{Travail demandé}
 
 \subsection{Conception}
 
-L'ensemble de la tâche demandée au système a été divisée en plusieurs sous-tâches virtuellement indépendantes, décomposant le système en bocs de la manière suivante : 
+L'ensemble de la tâche demandée au système a été divisée en plusieurs sous-tâches virtuellement indépendantes, décomposant le système en blocs de la manière suivante : 
+
 \begin{center}
 
 \begin{tabular}{lll}
@@ -160,48 +163,56 @@ L'ensemble de la tâche demandée au système a été divisée en plusieurs sous
 & \texttt{osc\_i} & \\
 \hline
 \textbf{\texttt{choix}} & \texttt{led\_01[15..0]} &  \texttt{led\_o[15..0]} : la sortie correspondante à la commande en paramètre. \\
-& \texttt{led\_00[15..0]} & Ce bloc prends en entrée les deux blocs à sortie variable et le signal de\\
+& \texttt{led\_00[15..0]} & Ce bloc prend en entrée les deux blocs à sortie variable et le signal de\\
 & \texttt{com\_i[1..0]} &  commande afin de fournir en sortie la valeur voulue. \\
 \end{tabular}
+
 \end{center}
 
 
 \subsection{Implémentation}
-\textsc{\underline{Remarques} :} Le bloc \texttt{bin\_lin} est le même que celui conçu lors du précédent laboratoire, à la différence près qu'il s'agit maintenant d'un bloc allant de 4 vers 16bits, cette extension fût décrite par flot de données (instruction \texttt{when..else}). \\
-\subsubsection{Bloc Normal}
-Ce bloc représente la charge de travail la plus lourde. Il est en effet nécessaire d'utiliser les 3 entrées numériques ainsi que le signal oscillant. Ces 3 entrées sont d'abord converties en valeurs linéaires sur 16bits en utilisant 3 composants \texttt{bin\_lin} en parallèle, de plus, un masque sur 16bits correspondant à la valeur courante du signal oscillant est généré, ainsi que signaux booléens permettant d'indiquer un éventuel dépassement haut ou bas. Puis, comme illustré dans la \textbf{Figure 3}, trois masques sont calculés simultanéments : 
+
+\textsc{\underline{Remarques} :} Le bloc \texttt{bin\_lin} est le même que celui conçu lors du précédent laboratoire, à la différence près qu'il s'agit maintenant d'un bloc allant de 4 vers 16 bits, cette extension fût décrite par flot de données (instruction \lstinline{when..else}).
+
+\subsubsection{Bloc \texttt{normal}}
+
+Ce bloc représente la charge de travail la plus lourde puisqu'il implémente la \textit{Marche normale}. Il est nécessaire d'utiliser les 3 entrées numériques ainsi que le signal oscillant. Ces 3 entrées sont d'abord converties en valeurs linéaires sur 16 bits en utilisant 3 composants \texttt{bin\_lin} en parallèle. De plus, un masque sur 16 bits correspondant à la valeur courante du signal oscillant est généré, ainsi qu'un signal booléen permettant d'indiquer un éventuel dépassement haut ou bas. Puis, comme illustré dans la figure \ref{fig:3}, trois masques sont calculés simultanément : 
+
 \begin{itemize}
-\item Le \texttt{Masque Signal Fort} correspond aux LEDs comprises dans l'intervalle [min\_i;val\_i]. Pour obtenir cet intervalle de manière combinatoire, il est d'abord nécessaire de faire un \texttt{shift right} de la valeur linéaire de min\_i : en effet l'intervalle à afficher comprend min\_i et dans l'optique de l'utilisation d'opérateurs logiques, il est nécessaire de décaler sa valeur pour éviter le chevauchement avec val\_i. La valeur finale du masque est ensuite obtenue par l'opération suivante :
+
+\item Le \texttt{Masque Signal Fort} correspond aux LEDs comprises dans l'intervalle [\textit{min\_i};\textit{val\_i}]. Pour obtenir cet intervalle de manière combinatoire, il est d'abord nécessaire de faire un décalage vers la droite de la valeur linéaire de \textit{min\_i} : en effet l'intervalle à afficher comprend \textit{min\_i} et dans l'optique de l'utilisation d'opérateurs logiques, il est nécessaire de décaler sa valeur pour éviter le chevauchement avec \textit{val\_i}. La valeur finale du masque est ensuite obtenue par l'opération suivante :
 \begin{equation*}
  mask\_str = (val\_lin \land max\_lin) \oplus min\_lin
 \end{equation*}
 
-\item Le \texttt{Masque Signal Faible} correspond aux LEDs comprises dans l'intervalle ]val\_i;max\_i]. Pour obtenir un masque représentant celui-ci, il est simplement nécessaire d'effectuer l'opération suivante :
+\item Le \texttt{Masque Signal Faible} correspond aux LEDs comprises dans l'intervalle ]\textit{val\_i};\textit{max\_i}]. Pour obtenir un masque représentant celui-ci, il est simplement nécessaire d'effectuer l'opération suivante :
 \begin{equation*}
 mask\_wek = (val\_lin \oplus max\_lin ) \land osc\_i\_mask
 \end{equation*}
 Le membre de droite de l'opération \texttt{AND} permet d'étendre la valeur du signal oscillant à tout le masque et d'ainsi avoir une sortie d'intensité faible sur cet intervalle.
 
-\item Le \texttt{Masque de Dépassement} varie selon la nature du dépassement. En effet s'il s'agit d'un dépassement haut, l'intervalle [val\_i;15] doit être affiché à une intensité forte, le masque est obtenu de la façon suivante : 
- \texttt{0x"FFFF" $\oplus$ '1' \& val\_lin(15 downto 1)} \\
- \texttt{val\_lin} est shifté de 1 vers la droite car la valeur val\_i doit etre comprise dans l'intervalle. \\
- En cas de dépassement bas, le masque est obtenu de la façon suivante : \texttt{val\_lin $\land$ osc\_mask}. Le premier masque est la valeur par défaut tandis que le second sera affecté en cas de dépassement bas (indiqué par un booléen).
-\end{itemize}
-Finalement, une sortie intermédiaire est obtenue par la jonction des masques mask\_str et mask\_wek puis, selon la valeur du booléen is\_out, cette sortie ou le masque de dépassement sera affecté à la sortie finale du bloc.
+\item Le \texttt{Masque de Dépassement} est toujours égal à \texttt{0x0000}.
 
-\subsubsection{Bloc Choix}
-Ce bloc est équivalement à un multiplexeur dont la table de vérité serait la suivante : 
+\end{itemize}
+
+Finalement, une sortie intermédiaire est obtenue par la jonction des masques \textit{mask\_str} et \textit{mask\_wek} puis, selon la valeur du booléen \textit{is\_out}, cette sortie ou le masque de dépassement sera affecté à la sortie finale du bloc.
+
+\subsubsection{Bloc \texttt{choix}}
+
+Ce bloc est équivalement à un multiplexeur dont la table de vérité est la suivante : 
+
 \begin{center}
 
-\begin{tabular}{l|l}
+\begin{tabular}{c|l}
 \textbf{S[1..0]} & \textbf{Z[15..0]} \\
-00 & led\_00 \\
-01 & led\_01 \\
-10 & 0x0000 \\
-11 & 0xFFFF 
+\texttt{00} & \textit{led\_00} \\
+\texttt{01} & \textit{led\_01} \\
+\texttt{10} & \texttt{0x0000} \\
+\texttt{11} & \texttt{0xFFFF} 
 \end{tabular}
+
 \end{center}
-Le tout étant décrit par flot de donnée, utilisant l'entrée com\_i en paramètre.
+Le tout étant décrit par flot de donnée, utilisant l'entrée \textit{com\_i} en paramètre.
 \subsection{Simulation}
 \textbf{ON A PAS DE SCREEN NI RIEN DE LA CONSOLE, EST CE QU'IL FAUDRAIT ALLER EN REFAIRE SUR PLACE ?}
 \subsection{Tests réalisés}
@@ -222,19 +233,41 @@ Afin de tester de facon exhaustive notre système, le fichier fourni \textit{run
 Ci-dessous est présenté le résultat de la synthèse de notre système à travers Quartus II, depuis min\_max\_top :
 \begin{minipage}{\textwidth}
 	\center
-	\includegraphics[scale=0.5]{figures/min_max_top.png}
+	\includegraphics[width=\textwidth]{figures/min_max_top.png}
 	\captionof{figure}{Synthèse du système dans Quartus II}
     	\end{minipage}
+    	
+\newpage
 
-%\subsection{Partie 2}
+\section{Travail optionnel}
 
-%\subsubsection{Conception}
+Il était possible de réaliser un travail optionnel consistant à modifier le bloc \texttt{normal} afin que si \textit{valeur} est hors de l'intervalle [\textit{min} ; \textit{max}] :
 
-%\subsubsection{Implémentation}
+\begin{itemize}
 
-%\subsubsection{Simulation}
+\item \textit{valeur} < \textit{min} : allumer les LEDs 0 à \textit{valeur} avec une faible intensité.
+\item \textit{valeur} > \textit{max} : allumer les LEDs \textit{valeur} à 15 avec une forte intensité.
 
-%\subsubsection{Tests réalisés}
+\end{itemize}
+
+\subsection{Conception}
+
+Afin de réaliser cette partie optionnelle, il nous a fallu modifier le comportement du \texttt{Masque de Dépassement} du bloc \texttt{normal}. Nous avons ajouté deux signaux booléens permettant de savoir s'il y a eu dépassement haut ou dépassement bas.
+
+Le masque varie selon la nature du dépassement. En effet s'il s'agit d'un dépassement haut, l'intervalle [\textit{val\_i} ; 15] doit être affiché à une intensité forte, le masque est obtenu de la façon suivante :
+\begin{equation*}
+ \texttt{0x"FFFF" $\oplus$ ('1' \& val\_lin(15 downto 1))} 
+\end{equation*}
+
+ \texttt{val\_lin} est shifté de 1 vers la droite car la valeur val\_i doit etre comprise dans l'intervalle. \\
+ En cas de dépassement bas, le masque est obtenu de la façon suivante : \texttt{val\_lin $\land$ osc\_mask}. Le premier masque est la valeur par défaut tandis que le second sera affecté en cas de dépassement bas (indiqué par un booléen).
+ 
+\subsection{Tests réalisés}
+
+\textbf{METTRE RESULTATS TEST BENCHS SI CA MARCHE}
 
 \section{Conclusion}
+
+Ce laboratoire nous a permis d'utiliser et d'apprivoiser les programmes QuestaSim et Quartus ainsi que d'approfondir nos connaissances dans la conception de systèmes numériques ainsi qu'en VHDL.
+
 \end{document}
