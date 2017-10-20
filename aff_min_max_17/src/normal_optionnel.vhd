@@ -2,9 +2,10 @@
 -- HEIG-VD, Haute Ecole d'Ingenierie et de Gestion du canton de Vaud
 -- Institut REDS, Reconfigurable & Embedded Digital Systems
 --
--- Fichier      : normal.vhd
+-- Fichier      : normal_optionnel.vhd
 --
--- Description  : Contient la logique du mode normal du système.
+-- Description  : Contient la logique du mode normal du système (partie
+--                optionnelle).
 --
 -- Auteurs      : Arthur Passuello & Lucas Elisei
 -- Date         : 07.10.2017
@@ -37,17 +38,22 @@ architecture a_normal of normal is
     signal led_s              : std_logic_vector(15 downto 0) := (others => '0');
     signal out_of_bounds_mask : std_logic_vector(15 downto 0) := (others => '0');
     signal is_out             : Boolean;
+    signal is_out_high        : Boolean;
+    signal is_out_low         : Boolean;
+
 
     component bin_lin is
         port(
             bin_i : in std_logic_vector(3 downto 0);
-        	lin_o : out std_logic_vector(15 downto 0)
+            lin_o : out std_logic_vector(15 downto 0)
         );
     end component;
 --
 begin
 
-    is_out <= true when (val_i > max_i OR val_i < min_i) else false;
+    is_out_high <= true when val_i > max_i else false;
+    is_out_low  <= true when val_i < min_i else false;
+    is_out <= true when is_out_high OR is_out_low else false;
     osc_mask <= (others => osc_i);
 
     -- Decodeur pour max
@@ -77,6 +83,7 @@ begin
     temp_min <= '0' & min_mask(15 downto 1);
     -- Masque signal fort
     temp_str <= (max_mask AND val_mask) XOR temp_min;
+    out_of_bounds_mask <= val_mask and osc_mask when is_out_low else (x"FFFF" xor ('1' & val_mask(15 downto 1));
 
     -- Obtention du pattern des LEDs
     led_s   <= temp_wek OR temp_str;
