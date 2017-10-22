@@ -28,13 +28,13 @@ end normal;
 
 architecture a_normal of normal is
 
-    signal temp_str           : std_logic_vector(15 downto 0);
-    signal temp_wek           : std_logic_vector(15 downto 0);
+    signal str_mask           : std_logic_vector(15 downto 0);
+    signal wek_mask           : std_logic_vector(15 downto 0);
     signal temp_min           : std_logic_vector(15 downto 0);
     signal osc_mask           : std_logic_vector(15 downto 0);
-    signal max_mask           : std_logic_vector(15 downto 0);
-    signal min_mask           : std_logic_vector(15 downto 0);
-    signal val_mask           : std_logic_vector(15 downto 0);
+    signal max_lin	          : std_logic_vector(15 downto 0);
+    signal min_lin	          : std_logic_vector(15 downto 0);
+    signal val_lin	          : std_logic_vector(15 downto 0);
     signal led_s              : std_logic_vector(15 downto 0) := (others => '0');
     signal out_of_bounds_mask : std_logic_vector(15 downto 0) := (others => '0');
     signal is_out             : Boolean;
@@ -60,34 +60,35 @@ begin
     bl_max : bin_lin
         port map (
             bin_i => max_i,
-            lin_o => max_mask
+            lin_o => max_lin
         );
 
     -- Decodeur pour min
     bl_min : bin_lin
         port map (
             bin_i => min_i,
-            lin_o => min_mask
+            lin_o => min_lin
         );
 
     -- Decodeur pour valeur
     bl_val : bin_lin
         port map (
             bin_i => val_i,
-            lin_o => val_mask
+            lin_o => val_lin
         );
 
     -- Masque signal faible
-    temp_wek <= (max_mask XOR val_mask) AND osc_mask;
+    wek_mask <= (max_lin XOR val_lin) AND osc_mask;
     -- Valeur de min decalee vers la droite
-    temp_min <= '0' & min_mask(15 downto 1);
+    temp_min <= '0' & min_lin(15 downto 1);
     -- Masque signal fort
-    temp_str <= (max_mask AND val_mask) XOR temp_min;
-    out_of_bounds_mask <= val_mask and osc_mask when is_out_low else (x"FFFF" xor ('1' & val_mask(15 downto 1));
+    str_mask <= (max_lin AND val_lin) XOR temp_min;
+    -- Masque de dépassement, haut par défaut, bas sinon
+    out_of_bounds_mask <= val_lin and osc_mask when is_out_low else (x"FFFF" xor ('0' & val_lin(15 downto 1));
 
     -- Obtention du pattern des LEDs
-    led_s   <= temp_wek OR temp_str;
-    -- Masquage si hors de l'intervalle
+    led_s   <= wek_mask OR str_mask;
+    -- Détermination de la sortie selon la présence d'un dépassement
     led_o   <= led_s when (not is_out) else out_of_bounds_mask;
 
 end a_normal;
