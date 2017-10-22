@@ -213,9 +213,39 @@ Ce bloc est équivalement à un multiplexeur dont la table de vérité est la su
 
 \end{center}
 Le tout étant décrit par flot de donnée, utilisant l'entrée \textit{com\_i} en paramètre.
+
 \subsection{Simulation}
-\textbf{ON A PAS DE SCREEN NI RIEN DE LA CONSOLE, EST CE QU'IL FAUDRAIT ALLER EN REFAIRE SUR PLACE ?}
+
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[width = 0.7\textwidth]{figures/mode_base_1.png}
+	\captionof{figure}{Simulation pour \textit{max} = 15, \textit{valeur} = 7, \textit{min} = 0}
+	\label{fig:4}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[width = 0.7\textwidth]{figures/mode_base_2.png}
+	\captionof{figure}{Simulation pour \textit{max} = 11, \textit{valeur} = 7, \textit{min} = 4}
+	\label{fig:5}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[width = 0.7\textwidth]{figures/mode_base_depass_bas.png}
+	\captionof{figure}{Simulation d'un dépassement bas (\textit{val} < \textit{min})}
+	\label{fig:6}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[width = 0.7\textwidth]{figures/mode_base_depass_haut.png}
+	\captionof{figure}{Simulation d'un dépassement haut (\textit{val} > \textit{min})}
+	\label{fig:7}
+\end{minipage}
+
 \subsection{Tests réalisés}
+
 Afin de tester de facon exhaustive notre système, le fichier fourni \textit{run\_aff\_min\_max\_tb.tcl} a été utilisé, donnant en sortie le résultat suivant : 
 \begin{lstlisting}[language=bash]
 # ** Note: >> Debut de la simulation
@@ -260,11 +290,25 @@ Le masque varie selon la nature du dépassement. En effet s'il s'agit d'un dépa
 \end{equation*}
 
  \texttt{val\_lin} est shifté de 1 vers la droite car la valeur val\_i doit etre comprise dans l'intervalle. \\
- En cas de dépassement bas, le masque est obtenu de la façon suivante : \texttt{val\_lin $\land$ osc\_mask}. Le premier masque est la valeur par défaut tandis que le second sera affecté en cas de dépassement bas (indiqué par un booléen).
+ En cas de dépassement bas, le masque est obtenu de la façon suivante : \texttt{val\_lin $\land$ osc\_mask}. Le premier masque est la valeur par défaut tandis que le second sera affecté en cas de dépassement bas (indiqué par un booléen). \\
  
-\subsection{Tests réalisés}
+\textbf{Note :} Il est possible de tester la solution optionnelle en décommentant la ligne n°30 du fichier \texttt{comp\_aff\_min\_max.tcl}.
+ 
+\subsection{Simulation}
 
-\textbf{METTRE RESULTATS TEST BENCHS SI CA MARCHE}
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[width = 0.8\textwidth]{figures/mode_opt_depass_bas.png}
+	\captionof{figure}{Simulation d'un dépassement bas (\textit{val} < \textit{min})}
+	\label{fig:8}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+	\center
+	\includegraphics[width = 0.8\textwidth]{figures/mode_base_depass_haut.png}
+	\captionof{figure}{Simulation d'un dépassement haut (\textit{val} < \textit{min})}
+	\label{fig:9}
+\end{minipage}
 
 \section{Conclusion}
 
