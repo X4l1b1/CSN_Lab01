@@ -27,6 +27,7 @@ vmap work work
 vcom -reportprogress 300 -work work   ../src/min_max_top.vhd
 vcom -reportprogress 300 -work work   ../src/choix.vhd
 vcom -reportprogress 300 -work work   ../src/normal.vhd
+#vcom -reportprogress 300 -work work   ../src/normal_optionnel.vhd
 vcom -reportprogress 300 -work work   ../src/bin_lin.vhd
 
  # test-bench compilation
